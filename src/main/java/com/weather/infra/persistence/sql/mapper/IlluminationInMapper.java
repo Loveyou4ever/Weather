@@ -25,8 +25,6 @@ public interface IlluminationInMapper {
 
     IlluminationIn selectByPrimaryKey(Integer id);
 
-    IlluminationIn selectForIlluminationIndoor();
-
     int updateByExampleSelective(@Param("record") IlluminationIn record, @Param("example") IlluminationInExample example);
 
     int updateByExample(@Param("record") IlluminationIn record, @Param("example") IlluminationInExample example);
@@ -34,4 +32,6 @@ public interface IlluminationInMapper {
     int updateByPrimaryKeySelective(IlluminationIn record);
 
     int updateByPrimaryKey(IlluminationIn record);
+
+    IlluminationIn selectForIlluminationIndoor();
 }

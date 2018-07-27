@@ -5,9 +5,7 @@ import com.weather.domain.model.TempInExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
-
 import java.util.List;
-
 @Mapper
 public interface TempInMapper {
     int countByExample(TempInExample example);
@@ -26,8 +24,6 @@ public interface TempInMapper {
 
     TempIn selectByPrimaryKey(Integer id);
 
-    TempIn selectForTemperatureIndoor();
-
     int updateByExampleSelective(@Param("record") TempIn record, @Param("example") TempInExample example);
 
     int updateByExample(@Param("record") TempIn record, @Param("example") TempInExample example);
@@ -35,4 +31,6 @@ public interface TempInMapper {
     int updateByPrimaryKeySelective(TempIn record);
 
     int updateByPrimaryKey(TempIn record);
+
+    TempIn selectForTemperatureIndoor();
 }

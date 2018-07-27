@@ -174,52 +174,52 @@ public class IlluminationOutExample {
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationEqualTo(Integer value) {
+        public Criteria andIlluminationEqualTo(Double value) {
             addCriterion("illumination =", value, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationNotEqualTo(Integer value) {
+        public Criteria andIlluminationNotEqualTo(Double value) {
             addCriterion("illumination <>", value, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationGreaterThan(Integer value) {
+        public Criteria andIlluminationGreaterThan(Double value) {
             addCriterion("illumination >", value, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationGreaterThanOrEqualTo(Integer value) {
+        public Criteria andIlluminationGreaterThanOrEqualTo(Double value) {
             addCriterion("illumination >=", value, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationLessThan(Integer value) {
+        public Criteria andIlluminationLessThan(Double value) {
             addCriterion("illumination <", value, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationLessThanOrEqualTo(Integer value) {
+        public Criteria andIlluminationLessThanOrEqualTo(Double value) {
             addCriterion("illumination <=", value, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationIn(List<Integer> values) {
+        public Criteria andIlluminationIn(List<Double> values) {
             addCriterion("illumination in", values, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationNotIn(List<Integer> values) {
+        public Criteria andIlluminationNotIn(List<Double> values) {
             addCriterion("illumination not in", values, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationBetween(Integer value1, Integer value2) {
+        public Criteria andIlluminationBetween(Double value1, Double value2) {
             addCriterion("illumination between", value1, value2, "illumination");
             return (Criteria) this;
         }
 
-        public Criteria andIlluminationNotBetween(Integer value1, Integer value2) {
+        public Criteria andIlluminationNotBetween(Double value1, Double value2) {
             addCriterion("illumination not between", value1, value2, "illumination");
             return (Criteria) this;
         }

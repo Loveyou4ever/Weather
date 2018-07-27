@@ -3,7 +3,7 @@
 <mapper namespace="com.weather.infra.persistence.sql.mapper.AirSpeedMapper" >
   <resultMap id="BaseResultMap" type="com.weather.domain.model.AirSpeed" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="air_speed" property="airSpeed" jdbcType="INTEGER" />
+    <result column="air_speed" property="airSpeed" jdbcType="DOUBLE" />
     <result column="catch_time" property="catchTime" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -102,10 +102,11 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.weather.domain.model.AirSpeed" >
+  <insert id="insert" parameterType="com.weather.domain.model.AirSpeed"
+          useGeneratedKeys="true" keyProperty="id">
     insert into air_speed (id, air_speed, catch_time
       )
-    values (#{id,jdbcType=INTEGER}, #{airSpeed,jdbcType=INTEGER}, #{catchTime,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{airSpeed,jdbcType=DOUBLE}, #{catchTime,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.weather.domain.model.AirSpeed" >
@@ -126,7 +127,7 @@
         #{id,jdbcType=INTEGER},
       </if>
       <if test="airSpeed != null" >
-        #{airSpeed,jdbcType=INTEGER},
+        #{airSpeed,jdbcType=DOUBLE},
       </if>
       <if test="catchTime != null" >
         #{catchTime,jdbcType=VARCHAR},
@@ -146,7 +147,7 @@
         id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.airSpeed != null" >
-        air_speed = #{record.airSpeed,jdbcType=INTEGER},
+        air_speed = #{record.airSpeed,jdbcType=DOUBLE},
       </if>
       <if test="record.catchTime != null" >
         catch_time = #{record.catchTime,jdbcType=VARCHAR},
@@ -159,7 +160,7 @@
   <update id="updateByExample" parameterType="map" >
     update air_speed
     set id = #{record.id,jdbcType=INTEGER},
-      air_speed = #{record.airSpeed,jdbcType=INTEGER},
+      air_speed = #{record.airSpeed,jdbcType=DOUBLE},
       catch_time = #{record.catchTime,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -169,7 +170,7 @@
     update air_speed
     <set >
       <if test="airSpeed != null" >
-        air_speed = #{airSpeed,jdbcType=INTEGER},
+        air_speed = #{airSpeed,jdbcType=DOUBLE},
       </if>
       <if test="catchTime != null" >
         catch_time = #{catchTime,jdbcType=VARCHAR},
@@ -179,7 +180,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.weather.domain.model.AirSpeed" >
     update air_speed
-    set air_speed = #{airSpeed,jdbcType=INTEGER},
+    set air_speed = #{airSpeed,jdbcType=DOUBLE},
       catch_time = #{catchTime,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

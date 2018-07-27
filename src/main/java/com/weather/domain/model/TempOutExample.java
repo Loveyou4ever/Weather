@@ -174,52 +174,52 @@ public class TempOutExample {
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureEqualTo(Integer value) {
+        public Criteria andTemperatureEqualTo(Double value) {
             addCriterion("temperature =", value, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureNotEqualTo(Integer value) {
+        public Criteria andTemperatureNotEqualTo(Double value) {
             addCriterion("temperature <>", value, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureGreaterThan(Integer value) {
+        public Criteria andTemperatureGreaterThan(Double value) {
             addCriterion("temperature >", value, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureGreaterThanOrEqualTo(Integer value) {
+        public Criteria andTemperatureGreaterThanOrEqualTo(Double value) {
             addCriterion("temperature >=", value, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureLessThan(Integer value) {
+        public Criteria andTemperatureLessThan(Double value) {
             addCriterion("temperature <", value, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureLessThanOrEqualTo(Integer value) {
+        public Criteria andTemperatureLessThanOrEqualTo(Double value) {
             addCriterion("temperature <=", value, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureIn(List<Integer> values) {
+        public Criteria andTemperatureIn(List<Double> values) {
             addCriterion("temperature in", values, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureNotIn(List<Integer> values) {
+        public Criteria andTemperatureNotIn(List<Double> values) {
             addCriterion("temperature not in", values, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureBetween(Integer value1, Integer value2) {
+        public Criteria andTemperatureBetween(Double value1, Double value2) {
             addCriterion("temperature between", value1, value2, "temperature");
             return (Criteria) this;
         }
 
-        public Criteria andTemperatureNotBetween(Integer value1, Integer value2) {
+        public Criteria andTemperatureNotBetween(Double value1, Double value2) {
             addCriterion("temperature not between", value1, value2, "temperature");
             return (Criteria) this;
         }

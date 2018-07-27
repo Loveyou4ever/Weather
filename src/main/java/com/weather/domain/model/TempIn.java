@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class TempIn implements Serializable {
     private Integer id;
 
-    private Integer temperature;
+    private Double temperature;
 
     private String catchTime;
 
@@ -19,11 +19,11 @@ public class TempIn implements Serializable {
         this.id = id;
     }
 
-    public Integer getTemperature() {
+    public Double getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Integer temperature) {
+    public void setTemperature(Double temperature) {
         this.temperature = temperature;
     }
 

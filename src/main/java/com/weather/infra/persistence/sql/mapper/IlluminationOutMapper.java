@@ -25,8 +25,6 @@ public interface IlluminationOutMapper {
 
     IlluminationOut selectByPrimaryKey(Integer id);
 
-    IlluminationOut selectForIlluminationOutdoor();
-
     int updateByExampleSelective(@Param("record") IlluminationOut record, @Param("example") IlluminationOutExample example);
 
     int updateByExample(@Param("record") IlluminationOut record, @Param("example") IlluminationOutExample example);
@@ -34,4 +32,6 @@ public interface IlluminationOutMapper {
     int updateByPrimaryKeySelective(IlluminationOut record);
 
     int updateByPrimaryKey(IlluminationOut record);
+
+    IlluminationOut selectForIlluminationOutdoor();
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.weather.infra.persistence.sql.mapper.AtmoPreMapper" >
-  <resultMap id="BaseResultMap" type="com.weather.domain.model.AtmoPre" >
+<mapper namespace="com.weather.infra.persistence.sql.mapper.ControllerMapper" >
+  <resultMap id="BaseResultMap" type="com.weather.domain.model.Controller" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="atmospheric_pressure" property="atmosphericPressure" jdbcType="DOUBLE" />
-    <result column="catch_time" property="catchTime" jdbcType="VARCHAR" />
+    <result column="auto_flag" property="autoFlag" jdbcType="INTEGER" />
+    <result column="operation_time" property="operationTime" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -65,15 +65,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, atmospheric_pressure, catch_time
+    id, auto_flag, operation_time
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.weather.domain.model.AtmoPreExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.weather.domain.model.ControllerExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from atmospheric_pressure
+    from controller
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -84,73 +84,73 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from atmospheric_pressure
+    from controller
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="selectForAtmoPre" resultMap="BaseResultMap">
+  <select id="selectForAutoFlag" resultMap="BaseResultMap">
     select *
-    from atmospheric_pressure
+    from controller
     group by id desc limit 1
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from atmospheric_pressure
+    delete from controller
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.weather.domain.model.AtmoPreExample" >
-    delete from atmospheric_pressure
+  <delete id="deleteByExample" parameterType="com.weather.domain.model.ControllerExample" >
+    delete from controller
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.weather.domain.model.AtmoPre"
+  <insert id="insert" parameterType="com.weather.domain.model.Controller"
           useGeneratedKeys="true" keyProperty="id">
-    insert into atmospheric_pressure (id, atmospheric_pressure, catch_time
+    insert into controller (id, auto_flag, operation_time
       )
-    values (#{id,jdbcType=INTEGER}, #{atmosphericPressure,jdbcType=DOUBLE}, #{catchTime,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{autoFlag,jdbcType=INTEGER}, #{operationTime,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.weather.domain.model.AtmoPre" >
-    insert into atmospheric_pressure
+  <insert id="insertSelective" parameterType="com.weather.domain.model.Controller" >
+    insert into controller
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
-      <if test="atmosphericPressure != null" >
-        atmospheric_pressure,
+      <if test="autoFlag != null" >
+        auto_flag,
       </if>
-      <if test="catchTime != null" >
-        catch_time,
+      <if test="operationTime != null" >
+        operation_time,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="atmosphericPressure != null" >
-        #{atmosphericPressure,jdbcType=DOUBLE},
+      <if test="autoFlag != null" >
+        #{autoFlag,jdbcType=INTEGER},
       </if>
-      <if test="catchTime != null" >
-        #{catchTime,jdbcType=VARCHAR},
+      <if test="operationTime != null" >
+        #{operationTime,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.weather.domain.model.AtmoPreExample" resultType="java.lang.Integer" >
-    select count(*) from atmospheric_pressure
+  <select id="countByExample" parameterType="com.weather.domain.model.ControllerExample" resultType="java.lang.Integer" >
+    select count(*) from controller
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update atmospheric_pressure
+    update controller
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.atmosphericPressure != null" >
-        atmospheric_pressure = #{record.atmosphericPressure,jdbcType=DOUBLE},
+      <if test="record.autoFlag != null" >
+        auto_flag = #{record.autoFlag,jdbcType=INTEGER},
       </if>
-      <if test="record.catchTime != null" >
-        catch_time = #{record.catchTime,jdbcType=VARCHAR},
+      <if test="record.operationTime != null" >
+        operation_time = #{record.operationTime,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -158,39 +158,39 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update atmospheric_pressure
+    update controller
     set id = #{record.id,jdbcType=INTEGER},
-      atmospheric_pressure = #{record.atmosphericPressure,jdbcType=DOUBLE},
-      catch_time = #{record.catchTime,jdbcType=VARCHAR}
+      auto_flag = #{record.autoFlag,jdbcType=INTEGER},
+      operation_time = #{record.operationTime,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.weather.domain.model.AtmoPre" >
-    update atmospheric_pressure
+  <update id="updateByPrimaryKeySelective" parameterType="com.weather.domain.model.Controller" >
+    update controller
     <set >
-      <if test="atmosphericPressure != null" >
-        atmospheric_pressure = #{atmosphericPressure,jdbcType=DOUBLE},
+      <if test="autoFlag != null" >
+        auto_flag = #{autoFlag,jdbcType=INTEGER},
       </if>
-      <if test="catchTime != null" >
-        catch_time = #{catchTime,jdbcType=VARCHAR},
+      <if test="operationTime != null" >
+        operation_time = #{operationTime,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.weather.domain.model.AtmoPre" >
-    update atmospheric_pressure
-    set atmospheric_pressure = #{atmosphericPressure,jdbcType=DOUBLE},
-      catch_time = #{catchTime,jdbcType=VARCHAR}
+  <update id="updateByPrimaryKey" parameterType="com.weather.domain.model.Controller" >
+    update controller
+    set auto_flag = #{autoFlag,jdbcType=INTEGER},
+      operation_time = #{operationTime,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select resultMap="BaseResultMap" parameterType="com.weather.domain.model.AtmoPreExample" id="selectByExampleWithRowbounds" >
+  <select resultMap="BaseResultMap" parameterType="com.weather.domain.model.ControllerExample" id="selectByExampleWithRowbounds" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from atmospheric_pressure
+    from controller
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>

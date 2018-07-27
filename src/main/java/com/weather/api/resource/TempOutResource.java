@@ -2,7 +2,6 @@ package com.weather.api.resource;
 
 import com.weather.api.respond.Response;
 import com.weather.api.respond.Responses;
-import com.weather.domain.model.TempIn;
 import com.weather.domain.model.TempOut;
 import com.weather.domain.service.TempOutService;
 import org.springframework.stereotype.Controller;
@@ -50,12 +49,12 @@ public class TempOutResource {
 
     @ResponseBody
     @RequestMapping(value = "/FindByIdTempOut",method = RequestMethod.GET)
-    public Response findRecordById(@Valid TempIn tempIn, BindingResult bindingResult){
+    public Response findRecordById(@Valid TempOut tempOut, BindingResult bindingResult){
         if (bindingResult.hasErrors()) {
             return Responses.errorResponse("（室外）温度传感器信息查询失败");
         }else {
             //查询语句的写法：一定要在声明对象时把值直接赋进去
-            TempOut selectById = tempOutService.findRecordById(tempIn.getId());
+            TempOut selectById = tempOutService.findRecordById(tempOut.getId());
             Response response = Responses.successResponse();
             HashMap<String, Object> data = new HashMap<>();
             data.put("temperature_outdoor",selectById);

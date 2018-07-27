@@ -2,10 +2,7 @@ package com.weather.domain.service;
 
 import com.weather.domain.model.IlluminationIn;
 import com.weather.domain.model.IlluminationInExample;
-import com.weather.domain.model.IlluminationOut;
-import com.weather.domain.model.IlluminationOutExample;
 import com.weather.infra.persistence.sql.mapper.IlluminationInMapper;
-import com.weather.infra.persistence.sql.mapper.IlluminationOutMapper;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Service;
 

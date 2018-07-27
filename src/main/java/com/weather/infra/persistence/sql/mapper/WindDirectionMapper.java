@@ -25,8 +25,6 @@ public interface WindDirectionMapper {
 
     WindDirection selectByPrimaryKey(Integer id);
 
-    WindDirection selectForWindDirection();
-
     int updateByExampleSelective(@Param("record") WindDirection record, @Param("example") WindDirectionExample example);
 
     int updateByExample(@Param("record") WindDirection record, @Param("example") WindDirectionExample example);
@@ -34,4 +32,6 @@ public interface WindDirectionMapper {
     int updateByPrimaryKeySelective(WindDirection record);
 
     int updateByPrimaryKey(WindDirection record);
+
+    WindDirection selectForWindDirection();
 }

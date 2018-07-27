@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class AtmoPre implements Serializable {
     private Integer id;
 
-    private Integer atmosphericPressure;
+    private Double atmosphericPressure;
 
     private String catchTime;
 
@@ -19,11 +19,11 @@ public class AtmoPre implements Serializable {
         this.id = id;
     }
 
-    public Integer getAtmosphericPressure() {
+    public Double getAtmosphericPressure() {
         return atmosphericPressure;
     }
 
-    public void setAtmosphericPressure(Integer atmosphericPressure) {
+    public void setAtmosphericPressure(Double atmosphericPressure) {
         this.atmosphericPressure = atmosphericPressure;
     }
 

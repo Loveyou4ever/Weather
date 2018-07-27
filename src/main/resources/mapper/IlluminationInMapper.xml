@@ -3,7 +3,7 @@
 <mapper namespace="com.weather.infra.persistence.sql.mapper.IlluminationInMapper" >
   <resultMap id="BaseResultMap" type="com.weather.domain.model.IlluminationIn" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="illumination" property="illumination" jdbcType="INTEGER" />
+    <result column="illumination" property="illumination" jdbcType="DOUBLE" />
     <result column="catch_time" property="catchTime" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -102,10 +102,11 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.weather.domain.model.IlluminationIn" >
+  <insert id="insert" parameterType="com.weather.domain.model.IlluminationIn"
+          useGeneratedKeys="true" keyProperty="id">
     insert into illumination_indoor (id, illumination, catch_time
       )
-    values (#{id,jdbcType=INTEGER}, #{illumination,jdbcType=INTEGER}, #{catchTime,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{illumination,jdbcType=DOUBLE}, #{catchTime,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.weather.domain.model.IlluminationIn" >
@@ -126,7 +127,7 @@
         #{id,jdbcType=INTEGER},
       </if>
       <if test="illumination != null" >
-        #{illumination,jdbcType=INTEGER},
+        #{illumination,jdbcType=DOUBLE},
       </if>
       <if test="catchTime != null" >
         #{catchTime,jdbcType=VARCHAR},
@@ -146,7 +147,7 @@
         id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.illumination != null" >
-        illumination = #{record.illumination,jdbcType=INTEGER},
+        illumination = #{record.illumination,jdbcType=DOUBLE},
       </if>
       <if test="record.catchTime != null" >
         catch_time = #{record.catchTime,jdbcType=VARCHAR},
@@ -159,7 +160,7 @@
   <update id="updateByExample" parameterType="map" >
     update illumination_indoor
     set id = #{record.id,jdbcType=INTEGER},
-      illumination = #{record.illumination,jdbcType=INTEGER},
+      illumination = #{record.illumination,jdbcType=DOUBLE},
       catch_time = #{record.catchTime,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -169,7 +170,7 @@
     update illumination_indoor
     <set >
       <if test="illumination != null" >
-        illumination = #{illumination,jdbcType=INTEGER},
+        illumination = #{illumination,jdbcType=DOUBLE},
       </if>
       <if test="catchTime != null" >
         catch_time = #{catchTime,jdbcType=VARCHAR},
@@ -179,7 +180,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.weather.domain.model.IlluminationIn" >
     update illumination_indoor
-    set illumination = #{illumination,jdbcType=INTEGER},
+    set illumination = #{illumination,jdbcType=DOUBLE},
       catch_time = #{catchTime,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

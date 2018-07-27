@@ -174,52 +174,52 @@ public class AtmoPreExample {
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureEqualTo(Integer value) {
+        public Criteria andAtmosphericPressureEqualTo(Double value) {
             addCriterion("atmospheric_pressure =", value, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureNotEqualTo(Integer value) {
+        public Criteria andAtmosphericPressureNotEqualTo(Double value) {
             addCriterion("atmospheric_pressure <>", value, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureGreaterThan(Integer value) {
+        public Criteria andAtmosphericPressureGreaterThan(Double value) {
             addCriterion("atmospheric_pressure >", value, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureGreaterThanOrEqualTo(Integer value) {
+        public Criteria andAtmosphericPressureGreaterThanOrEqualTo(Double value) {
             addCriterion("atmospheric_pressure >=", value, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureLessThan(Integer value) {
+        public Criteria andAtmosphericPressureLessThan(Double value) {
             addCriterion("atmospheric_pressure <", value, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureLessThanOrEqualTo(Integer value) {
+        public Criteria andAtmosphericPressureLessThanOrEqualTo(Double value) {
             addCriterion("atmospheric_pressure <=", value, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureIn(List<Integer> values) {
+        public Criteria andAtmosphericPressureIn(List<Double> values) {
             addCriterion("atmospheric_pressure in", values, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureNotIn(List<Integer> values) {
+        public Criteria andAtmosphericPressureNotIn(List<Double> values) {
             addCriterion("atmospheric_pressure not in", values, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureBetween(Integer value1, Integer value2) {
+        public Criteria andAtmosphericPressureBetween(Double value1, Double value2) {
             addCriterion("atmospheric_pressure between", value1, value2, "atmosphericPressure");
             return (Criteria) this;
         }
 
-        public Criteria andAtmosphericPressureNotBetween(Integer value1, Integer value2) {
+        public Criteria andAtmosphericPressureNotBetween(Double value1, Double value2) {
             addCriterion("atmospheric_pressure not between", value1, value2, "atmosphericPressure");
             return (Criteria) this;
         }

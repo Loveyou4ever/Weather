@@ -2,9 +2,7 @@ package com.weather.api.resource;
 
 import com.weather.api.respond.Response;
 import com.weather.api.respond.Responses;
-import com.weather.domain.model.HumiOut;
 import com.weather.domain.model.IlluminationOut;
-import com.weather.domain.service.HumiOutService;
 import com.weather.domain.service.IlluminationOutService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

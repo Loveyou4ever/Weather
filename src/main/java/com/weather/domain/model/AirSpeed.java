@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class AirSpeed implements Serializable {
     private Integer id;
 
-    private Integer airSpeed;
+    private Double airSpeed;
 
     private String catchTime;
 
@@ -19,11 +19,11 @@ public class AirSpeed implements Serializable {
         this.id = id;
     }
 
-    public Integer getAirSpeed() {
+    public Double getAirSpeed() {
         return airSpeed;
     }
 
-    public void setAirSpeed(Integer airSpeed) {
+    public void setAirSpeed(Double airSpeed) {
         this.airSpeed = airSpeed;
     }
 

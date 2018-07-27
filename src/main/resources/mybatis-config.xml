@@ -18,5 +18,6 @@
         <mapper resource="mapper/AtmoPreMapper.xml"/>
         <mapper resource="mapper/WindDirectionMapper.xml"/>
         <mapper resource="mapper/UltravioletMapper.xml"/>
+        <mapper resource="mapper/ControllerMapper.xml"/>
     </mappers>
 </configuration>

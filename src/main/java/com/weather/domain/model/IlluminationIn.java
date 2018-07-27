@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class IlluminationIn implements Serializable {
     private Integer id;
 
-    private Integer illumination;
+    private Double illumination;
 
     private String catchTime;
 
@@ -19,11 +19,11 @@ public class IlluminationIn implements Serializable {
         this.id = id;
     }
 
-    public Integer getIllumination() {
+    public Double getIllumination() {
         return illumination;
     }
 
-    public void setIllumination(Integer illumination) {
+    public void setIllumination(Double illumination) {
         this.illumination = illumination;
     }
 

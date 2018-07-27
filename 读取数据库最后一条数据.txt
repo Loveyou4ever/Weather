@@ -1,0 +1,51 @@
+ <select id="selectForAirSpeed" resultMap="BaseResultMap">
+    select *
+    from air_speed
+    order by id desc limit 1
+  </select>
+  <select id="selectForAtmoPre" resultMap="BaseResultMap">
+    select *
+    from atmospheric_pressure
+    group by id desc limit 1
+  </select>
+  <select id="selectForHumidityIndoor" resultMap="BaseResultMap">
+    select *
+    from humidity_indoor
+    group by id desc limit 1
+  </select> 
+<select id="selectForHumidityOutdoor" resultMap="BaseResultMap">
+    select *
+    from humidity_outdoor
+    group by id desc limit 1
+  </select>
+  <select id="selectForIlluminationIndoor" resultMap="BaseResultMap">
+    select *
+    from illumination_indoor
+    group by id desc limit 1
+  </select>  
+<select id="selectForIlluminationOutdoor" resultMap="BaseResultMap" >
+    select *
+    from illumination_outdoor
+    group by id desc limit 1
+  </select>
+  <select id="selectForTemperatureIndoor" resultMap="BaseResultMap">
+    select *
+    from temperature_indoor
+    group by id desc limit 1
+  </select>
+  <select id="selectForTemperatureOutdoor" resultMap="BaseResultMap">
+    select *
+    from temperature_outdoor
+    group by id desc limit 1
+  </select>
+  <select id="selectForUltraviolet" resultMap="BaseResultMap">
+    select *
+    from ultraviolet
+    group by id desc limit 1
+  </select>
+  <select id="selectForWindDirection" resultMap="BaseResultMap">
+    select *
+    from wind_direction
+    group by id desc limit 1
+  </select>
+

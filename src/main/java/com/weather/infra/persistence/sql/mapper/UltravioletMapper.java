@@ -25,8 +25,6 @@ public interface UltravioletMapper {
 
     Ultraviolet selectByPrimaryKey(Integer id);
 
-    Ultraviolet selectForUltraviolet();
-
     int updateByExampleSelective(@Param("record") Ultraviolet record, @Param("example") UltravioletExample example);
 
     int updateByExample(@Param("record") Ultraviolet record, @Param("example") UltravioletExample example);
@@ -34,4 +32,6 @@ public interface UltravioletMapper {
     int updateByPrimaryKeySelective(Ultraviolet record);
 
     int updateByPrimaryKey(Ultraviolet record);
+
+    Ultraviolet selectForUltraviolet();
 }

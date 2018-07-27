@@ -174,52 +174,52 @@ public class HumiOutExample {
             return (Criteria) this;
         }
 
-        public Criteria andHumidityEqualTo(Integer value) {
+        public Criteria andHumidityEqualTo(Double value) {
             addCriterion("humidity =", value, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityNotEqualTo(Integer value) {
+        public Criteria andHumidityNotEqualTo(Double value) {
             addCriterion("humidity <>", value, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityGreaterThan(Integer value) {
+        public Criteria andHumidityGreaterThan(Double value) {
             addCriterion("humidity >", value, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityGreaterThanOrEqualTo(Integer value) {
+        public Criteria andHumidityGreaterThanOrEqualTo(Double value) {
             addCriterion("humidity >=", value, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityLessThan(Integer value) {
+        public Criteria andHumidityLessThan(Double value) {
             addCriterion("humidity <", value, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityLessThanOrEqualTo(Integer value) {
+        public Criteria andHumidityLessThanOrEqualTo(Double value) {
             addCriterion("humidity <=", value, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityIn(List<Integer> values) {
+        public Criteria andHumidityIn(List<Double> values) {
             addCriterion("humidity in", values, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityNotIn(List<Integer> values) {
+        public Criteria andHumidityNotIn(List<Double> values) {
             addCriterion("humidity not in", values, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityBetween(Integer value1, Integer value2) {
+        public Criteria andHumidityBetween(Double value1, Double value2) {
             addCriterion("humidity between", value1, value2, "humidity");
             return (Criteria) this;
         }
 
-        public Criteria andHumidityNotBetween(Integer value1, Integer value2) {
+        public Criteria andHumidityNotBetween(Double value1, Double value2) {
             addCriterion("humidity not between", value1, value2, "humidity");
             return (Criteria) this;
         }

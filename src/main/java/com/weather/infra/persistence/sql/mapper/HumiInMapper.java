@@ -25,8 +25,6 @@ public interface HumiInMapper {
 
     HumiIn selectByPrimaryKey(Integer id);
 
-    HumiIn selectForHumidityIndoor();
-
     int updateByExampleSelective(@Param("record") HumiIn record, @Param("example") HumiInExample example);
 
     int updateByExample(@Param("record") HumiIn record, @Param("example") HumiInExample example);
@@ -34,4 +32,6 @@ public interface HumiInMapper {
     int updateByPrimaryKeySelective(HumiIn record);
 
     int updateByPrimaryKey(HumiIn record);
+
+    HumiIn selectForHumidityIndoor();
 }

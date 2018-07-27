@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class HumiIn implements Serializable {
     private Integer id;
 
-    private Integer humidity;
+    private Double humidity;
 
     private String catchTime;
 
@@ -19,11 +19,11 @@ public class HumiIn implements Serializable {
         this.id = id;
     }
 
-    public Integer getHumidity() {
+    public Double getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(Integer humidity) {
+    public void setHumidity(Double humidity) {
         this.humidity = humidity;
     }
 

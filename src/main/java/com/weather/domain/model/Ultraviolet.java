@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Ultraviolet implements Serializable {
     private Integer id;
 
-    private Integer ultraviolet;
+    private Double ultraviolet;
 
     private String catchTime;
 
@@ -19,11 +19,11 @@ public class Ultraviolet implements Serializable {
         this.id = id;
     }
 
-    public Integer getUltraviolet() {
+    public Double getUltraviolet() {
         return ultraviolet;
     }
 
-    public void setUltraviolet(Integer ultraviolet) {
+    public void setUltraviolet(Double ultraviolet) {
         this.ultraviolet = ultraviolet;
     }
 

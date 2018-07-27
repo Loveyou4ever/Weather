@@ -3,7 +3,7 @@
 <mapper namespace="com.weather.infra.persistence.sql.mapper.UltravioletMapper" >
   <resultMap id="BaseResultMap" type="com.weather.domain.model.Ultraviolet" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="ultraviolet" property="ultraviolet" jdbcType="INTEGER" />
+    <result column="ultraviolet" property="ultraviolet" jdbcType="DOUBLE" />
     <result column="catch_time" property="catchTime" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -102,10 +102,11 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.weather.domain.model.Ultraviolet" >
+  <insert id="insert" parameterType="com.weather.domain.model.Ultraviolet"
+          useGeneratedKeys="true" keyProperty="id">
     insert into ultraviolet (id, ultraviolet, catch_time
       )
-    values (#{id,jdbcType=INTEGER}, #{ultraviolet,jdbcType=INTEGER}, #{catchTime,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{ultraviolet,jdbcType=DOUBLE}, #{catchTime,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.weather.domain.model.Ultraviolet" >
@@ -126,7 +127,7 @@
         #{id,jdbcType=INTEGER},
       </if>
       <if test="ultraviolet != null" >
-        #{ultraviolet,jdbcType=INTEGER},
+        #{ultraviolet,jdbcType=DOUBLE},
       </if>
       <if test="catchTime != null" >
         #{catchTime,jdbcType=VARCHAR},
@@ -146,7 +147,7 @@
         id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.ultraviolet != null" >
-        ultraviolet = #{record.ultraviolet,jdbcType=INTEGER},
+        ultraviolet = #{record.ultraviolet,jdbcType=DOUBLE},
       </if>
       <if test="record.catchTime != null" >
         catch_time = #{record.catchTime,jdbcType=VARCHAR},
@@ -159,7 +160,7 @@
   <update id="updateByExample" parameterType="map" >
     update ultraviolet
     set id = #{record.id,jdbcType=INTEGER},
-      ultraviolet = #{record.ultraviolet,jdbcType=INTEGER},
+      ultraviolet = #{record.ultraviolet,jdbcType=DOUBLE},
       catch_time = #{record.catchTime,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -169,7 +170,7 @@
     update ultraviolet
     <set >
       <if test="ultraviolet != null" >
-        ultraviolet = #{ultraviolet,jdbcType=INTEGER},
+        ultraviolet = #{ultraviolet,jdbcType=DOUBLE},
       </if>
       <if test="catchTime != null" >
         catch_time = #{catchTime,jdbcType=VARCHAR},
@@ -179,7 +180,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.weather.domain.model.Ultraviolet" >
     update ultraviolet
-    set ultraviolet = #{ultraviolet,jdbcType=INTEGER},
+    set ultraviolet = #{ultraviolet,jdbcType=DOUBLE},
       catch_time = #{catchTime,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

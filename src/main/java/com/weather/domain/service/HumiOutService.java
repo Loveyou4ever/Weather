@@ -1,10 +1,7 @@
 package com.weather.domain.service;
 
-import com.weather.domain.model.HumiIn;
-import com.weather.domain.model.HumiInExample;
 import com.weather.domain.model.HumiOut;
 import com.weather.domain.model.HumiOutExample;
-import com.weather.infra.persistence.sql.mapper.HumiInMapper;
 import com.weather.infra.persistence.sql.mapper.HumiOutMapper;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Service;

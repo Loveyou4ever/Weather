@@ -1,10 +1,7 @@
 package com.weather.domain.service;
 
-import com.weather.domain.model.AirSpeed;
-import com.weather.domain.model.AirSpeedExample;
 import com.weather.domain.model.AtmoPre;
 import com.weather.domain.model.AtmoPreExample;
-import com.weather.infra.persistence.sql.mapper.AirSpeedMapper;
 import com.weather.infra.persistence.sql.mapper.AtmoPreMapper;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Service;

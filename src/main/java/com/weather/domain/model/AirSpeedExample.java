@@ -174,52 +174,52 @@ public class AirSpeedExample {
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedEqualTo(Integer value) {
+        public Criteria andAirSpeedEqualTo(Double value) {
             addCriterion("air_speed =", value, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedNotEqualTo(Integer value) {
+        public Criteria andAirSpeedNotEqualTo(Double value) {
             addCriterion("air_speed <>", value, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedGreaterThan(Integer value) {
+        public Criteria andAirSpeedGreaterThan(Double value) {
             addCriterion("air_speed >", value, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedGreaterThanOrEqualTo(Integer value) {
+        public Criteria andAirSpeedGreaterThanOrEqualTo(Double value) {
             addCriterion("air_speed >=", value, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedLessThan(Integer value) {
+        public Criteria andAirSpeedLessThan(Double value) {
             addCriterion("air_speed <", value, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedLessThanOrEqualTo(Integer value) {
+        public Criteria andAirSpeedLessThanOrEqualTo(Double value) {
             addCriterion("air_speed <=", value, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedIn(List<Integer> values) {
+        public Criteria andAirSpeedIn(List<Double> values) {
             addCriterion("air_speed in", values, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedNotIn(List<Integer> values) {
+        public Criteria andAirSpeedNotIn(List<Double> values) {
             addCriterion("air_speed not in", values, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedBetween(Integer value1, Integer value2) {
+        public Criteria andAirSpeedBetween(Double value1, Double value2) {
             addCriterion("air_speed between", value1, value2, "airSpeed");
             return (Criteria) this;
         }
 
-        public Criteria andAirSpeedNotBetween(Integer value1, Integer value2) {
+        public Criteria andAirSpeedNotBetween(Double value1, Double value2) {
             addCriterion("air_speed not between", value1, value2, "airSpeed");
             return (Criteria) this;
         }

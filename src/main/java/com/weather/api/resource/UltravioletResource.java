@@ -2,9 +2,7 @@ package com.weather.api.resource;
 
 import com.weather.api.respond.Response;
 import com.weather.api.respond.Responses;
-import com.weather.domain.model.AirSpeed;
 import com.weather.domain.model.Ultraviolet;
-import com.weather.domain.service.AirSpeedService;
 import com.weather.domain.service.UltravioletService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

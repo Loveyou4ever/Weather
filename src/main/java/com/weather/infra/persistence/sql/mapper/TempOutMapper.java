@@ -25,8 +25,6 @@ public interface TempOutMapper {
 
     TempOut selectByPrimaryKey(Integer id);
 
-    TempOut selectForTemperatureOutdoor();
-
     int updateByExampleSelective(@Param("record") TempOut record, @Param("example") TempOutExample example);
 
     int updateByExample(@Param("record") TempOut record, @Param("example") TempOutExample example);
@@ -34,4 +32,6 @@ public interface TempOutMapper {
     int updateByPrimaryKeySelective(TempOut record);
 
     int updateByPrimaryKey(TempOut record);
+
+    TempOut selectForTemperatureOutdoor();
 }

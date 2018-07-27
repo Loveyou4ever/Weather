@@ -3,14 +3,14 @@ package com.weather.domain.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UltravioletExample {
+public class ControllerExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public UltravioletExample() {
+    public ControllerExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -164,138 +164,138 @@ public class UltravioletExample {
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletIsNull() {
-            addCriterion("ultraviolet is null");
+        public Criteria andAutoFlagIsNull() {
+            addCriterion("auto_flag is null");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletIsNotNull() {
-            addCriterion("ultraviolet is not null");
+        public Criteria andAutoFlagIsNotNull() {
+            addCriterion("auto_flag is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletEqualTo(Double value) {
-            addCriterion("ultraviolet =", value, "ultraviolet");
+        public Criteria andAutoFlagEqualTo(Integer value) {
+            addCriterion("auto_flag =", value, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletNotEqualTo(Double value) {
-            addCriterion("ultraviolet <>", value, "ultraviolet");
+        public Criteria andAutoFlagNotEqualTo(Integer value) {
+            addCriterion("auto_flag <>", value, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletGreaterThan(Double value) {
-            addCriterion("ultraviolet >", value, "ultraviolet");
+        public Criteria andAutoFlagGreaterThan(Integer value) {
+            addCriterion("auto_flag >", value, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletGreaterThanOrEqualTo(Double value) {
-            addCriterion("ultraviolet >=", value, "ultraviolet");
+        public Criteria andAutoFlagGreaterThanOrEqualTo(Integer value) {
+            addCriterion("auto_flag >=", value, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletLessThan(Double value) {
-            addCriterion("ultraviolet <", value, "ultraviolet");
+        public Criteria andAutoFlagLessThan(Integer value) {
+            addCriterion("auto_flag <", value, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletLessThanOrEqualTo(Double value) {
-            addCriterion("ultraviolet <=", value, "ultraviolet");
+        public Criteria andAutoFlagLessThanOrEqualTo(Integer value) {
+            addCriterion("auto_flag <=", value, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletIn(List<Double> values) {
-            addCriterion("ultraviolet in", values, "ultraviolet");
+        public Criteria andAutoFlagIn(List<Integer> values) {
+            addCriterion("auto_flag in", values, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletNotIn(List<Double> values) {
-            addCriterion("ultraviolet not in", values, "ultraviolet");
+        public Criteria andAutoFlagNotIn(List<Integer> values) {
+            addCriterion("auto_flag not in", values, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletBetween(Double value1, Double value2) {
-            addCriterion("ultraviolet between", value1, value2, "ultraviolet");
+        public Criteria andAutoFlagBetween(Integer value1, Integer value2) {
+            addCriterion("auto_flag between", value1, value2, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andUltravioletNotBetween(Double value1, Double value2) {
-            addCriterion("ultraviolet not between", value1, value2, "ultraviolet");
+        public Criteria andAutoFlagNotBetween(Integer value1, Integer value2) {
+            addCriterion("auto_flag not between", value1, value2, "autoFlag");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeIsNull() {
-            addCriterion("catch_time is null");
+        public Criteria andOperationTimeIsNull() {
+            addCriterion("operation_time is null");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeIsNotNull() {
-            addCriterion("catch_time is not null");
+        public Criteria andOperationTimeIsNotNull() {
+            addCriterion("operation_time is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeEqualTo(String value) {
-            addCriterion("catch_time =", value, "catchTime");
+        public Criteria andOperationTimeEqualTo(String value) {
+            addCriterion("operation_time =", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeNotEqualTo(String value) {
-            addCriterion("catch_time <>", value, "catchTime");
+        public Criteria andOperationTimeNotEqualTo(String value) {
+            addCriterion("operation_time <>", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeGreaterThan(String value) {
-            addCriterion("catch_time >", value, "catchTime");
+        public Criteria andOperationTimeGreaterThan(String value) {
+            addCriterion("operation_time >", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeGreaterThanOrEqualTo(String value) {
-            addCriterion("catch_time >=", value, "catchTime");
+        public Criteria andOperationTimeGreaterThanOrEqualTo(String value) {
+            addCriterion("operation_time >=", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeLessThan(String value) {
-            addCriterion("catch_time <", value, "catchTime");
+        public Criteria andOperationTimeLessThan(String value) {
+            addCriterion("operation_time <", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeLessThanOrEqualTo(String value) {
-            addCriterion("catch_time <=", value, "catchTime");
+        public Criteria andOperationTimeLessThanOrEqualTo(String value) {
+            addCriterion("operation_time <=", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeLike(String value) {
-            addCriterion("catch_time like", value, "catchTime");
+        public Criteria andOperationTimeLike(String value) {
+            addCriterion("operation_time like", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeNotLike(String value) {
-            addCriterion("catch_time not like", value, "catchTime");
+        public Criteria andOperationTimeNotLike(String value) {
+            addCriterion("operation_time not like", value, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeIn(List<String> values) {
-            addCriterion("catch_time in", values, "catchTime");
+        public Criteria andOperationTimeIn(List<String> values) {
+            addCriterion("operation_time in", values, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeNotIn(List<String> values) {
-            addCriterion("catch_time not in", values, "catchTime");
+        public Criteria andOperationTimeNotIn(List<String> values) {
+            addCriterion("operation_time not in", values, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeBetween(String value1, String value2) {
-            addCriterion("catch_time between", value1, value2, "catchTime");
+        public Criteria andOperationTimeBetween(String value1, String value2) {
+            addCriterion("operation_time between", value1, value2, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeNotBetween(String value1, String value2) {
-            addCriterion("catch_time not between", value1, value2, "catchTime");
+        public Criteria andOperationTimeNotBetween(String value1, String value2) {
+            addCriterion("operation_time not between", value1, value2, "operationTime");
             return (Criteria) this;
         }
 
-        public Criteria andCatchTimeLikeInsensitive(String value) {
-            addCriterion("upper(catch_time) like", value.toUpperCase(), "catchTime");
+        public Criteria andOperationTimeLikeInsensitive(String value) {
+            addCriterion("upper(operation_time) like", value.toUpperCase(), "operationTime");
             return (Criteria) this;
         }
     }
