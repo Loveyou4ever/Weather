@@ -64,5 +64,21 @@ public class TempInResource {
         }
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/FindAutoTempIn",method = RequestMethod.GET)
+    public Response findRecordAuto(@Valid TempIn tempIn, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) {
+            return Responses.errorResponse("（室内）温度传感器信息自动查询查询失败");
+        }else {
+            //查询语句的写法：一定要在声明对象时把值直接赋进去
+            TempIn selectAuto = tempInService.findRecordAuto();
+            Response response = Responses.successResponse();
+            HashMap<String, Object> data = new HashMap<>();
+            data.put("temperature_indoor",selectAuto);
+            response.setData(data);
+            return response;
+        }
+    }
+
 }
 

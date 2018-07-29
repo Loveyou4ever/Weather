@@ -63,5 +63,21 @@ public class HumiInResource {
         }
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/FindAutoHumiIn",method = RequestMethod.GET)
+    public Response findRecordAuto(@Valid HumiIn humiIn, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) {
+            return Responses.errorResponse("（室内）湿度传感器信息自动查询查询失败");
+        }else {
+            //查询语句的写法：一定要在声明对象时把值直接赋进去
+            HumiIn selectAuto = humiInService.findRecordAuto();
+            Response response = Responses.successResponse();
+            HashMap<String, Object> data = new HashMap<>();
+            data.put("humidity_indoor",selectAuto);
+            response.setData(data);
+            return response;
+        }
+    }
+
 }
 

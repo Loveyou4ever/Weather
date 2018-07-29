@@ -31,7 +31,7 @@ public class HumiOutResource {
     public Response addRecord(@RequestBody @Valid HumiOut humiOut,
                               BindingResult bindingResult) throws ParseException {
         if (bindingResult.hasErrors()) {
-            return Responses.errorResponse("（室内）湿度传感器信息录入失败");
+            return Responses.errorResponse("（室外）湿度传感器信息录入失败");
         }else {
 
             Date time1 = new Date();
@@ -51,7 +51,7 @@ public class HumiOutResource {
     @RequestMapping(value = "/FindByIdHumiOut",method = RequestMethod.GET)
     public Response findRecordById(@Valid HumiOut humiOut, BindingResult bindingResult){
         if (bindingResult.hasErrors()) {
-            return Responses.errorResponse("（室内）湿度传感器信息查询失败");
+            return Responses.errorResponse("（室外）湿度传感器信息查询失败");
         }else {
             //查询语句的写法：一定要在声明对象时把值直接赋进去
             HumiOut selectById = humiOutService.findRecordById(humiOut.getId());
