@@ -115,23 +115,19 @@ public class DataRespond {
                 System.out.println("Humidifier Off!");
                 flag2 = 0;
             }
-            if (illuminationOutService.findRecordAuto().getIllumination() > illuminationInService.findRecordAuto().getIllumination()) {
+            if (illuminationOutService.findRecordAuto().getIllumination()<100 && illuminationInService.findRecordAuto().getIllumination()<50) {
                 System.out.println("Light On!");
                 flag3 = 1;
             }
-            if (illuminationOutService.findRecordAuto().getIllumination() <= illuminationInService.findRecordAuto().getIllumination()) {
+            if (illuminationOutService.findRecordAuto().getIllumination()>=100 || illuminationInService.findRecordAuto().getIllumination()>=50) {
                 System.out.println("Light Off!");
                 flag3 = 0;
             }
-            if (((tempOutService.findRecordAuto().getTemperature() <= tempInService.findRecordAuto().getTemperature())
-                    ||
-                    (illuminationOutService.findRecordAuto().getIllumination() <= illuminationInService.findRecordAuto().getIllumination()))) {
+            if (illuminationOutService.findRecordAuto().getIllumination() >=100 && illuminationOutService.findRecordAuto().getIllumination()<1000) {
                 System.out.println("Curtain On!");
                 flag4 = 1;
             }
-            if (((tempOutService.findRecordAuto().getTemperature() > tempInService.findRecordAuto().getTemperature())
-                    &&
-                    (illuminationOutService.findRecordAuto().getIllumination() > illuminationInService.findRecordAuto().getIllumination()))) {
+            if (illuminationOutService.findRecordAuto().getIllumination() >1000 || illuminationOutService.findRecordAuto().getIllumination()<100) {
                 System.out.println("Curtain Off!");
                 flag4 = 0;
             }

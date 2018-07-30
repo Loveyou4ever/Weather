@@ -27,7 +27,7 @@ public class IlluminationOutResource {
     private IlluminationOutService illuminationOutService;
 
     @ResponseBody
-    @RequestMapping(value = "/IlluminationOutInesrt",method = RequestMethod.POST)
+    @RequestMapping(value = "/IlluminationOutInsert",method = RequestMethod.POST)
     public Response addRecord(@RequestBody @Valid IlluminationOut illuminationOut,
                               BindingResult bindingResult) throws ParseException {
         if (bindingResult.hasErrors()) {
